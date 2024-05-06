@@ -72,6 +72,7 @@ class Grid:
     #sets the elements of the initial grid by reading from the file passed as an argument. In this case it is the problem file
     def initial_grid (text_file, surface):
         count = 0
+     
         for index, value in enumerate(text_file):
             if ("robot_at_cell" in value):
                 cell = text_file[count +2]
@@ -86,7 +87,18 @@ class Grid:
                 Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\x.png", cell, surface)
  
             count = count +1
-            pygame.display.update()
+        clock.tick(1.5)
+        pygame.display.update()
+        pygame.display.set_caption("Starting the execution in 3...")
+        clock.tick(1.5)
+        pygame.display.update()
+        pygame.display.set_caption("Starting the execution in 2...")
+        clock.tick(1.5)
+        pygame.display.update()
+        pygame.display.set_caption("Starting the execution in 1...")
+        clock.tick(1.5)
+        pygame.display.update()
+         
  
    
     #changes the elements of the grid according to the file passed as an argument. In this case it is the problem file
@@ -154,7 +166,9 @@ class Grid:
                 clock.tick(1.8)
                 pygame.display.update()
  
-            count = count + 1 #ok
+            count = count + 1 
+        pygame.display.set_caption("Execution done")
+        pygame.display.update()  
  
    
     #allows to create, update and exit the grid
