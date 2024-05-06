@@ -98,7 +98,7 @@ class Grid:
         for value in (text_file):    
             if ("(move_vertical_robot_free"  in value) or ("(move_horizontal_robot_free" in value):
                 robot = text_file [count + 1]
-                old_cell = text_file[count + 2] #valore giusto
+                old_cell = text_file[count + 2] 
                 new_cell = text_file [count + 3][:-1]
                 current_robot_num = int (robot[-1])
                 Grid.update_grid(colors.BLACK, old_cell, surface)
@@ -118,7 +118,7 @@ class Grid:
             if "(grab" in value :
                 robot = text_file[count + 1]
                 box = text_file[count + 2]
-                current_cell = text_file[count + 3][:-1] #ok
+                current_cell = text_file[count + 3][:-1] 
                 Grid.update_grid(colors.BLACK ,current_cell, surface)
                 Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_with_box.png", current_cell, surface)
                 pygame.display.set_caption( str(robot) + " is grabbing " + str(box) + " at cell " + str(current_cell))
@@ -130,8 +130,8 @@ class Grid:
             if ("(move_vertical_robot_with_box"  in value) or ("(move_horizontal_robot_with_box" in value):
                 robot = text_file [count + 1]
                 box = text_file [count + 2]
-                old_cell = text_file[count + 3] #valore giusto
-                new_cell = text_file [count + 4][:-1] #valore giusto
+                old_cell = text_file[count + 3] 
+                new_cell = text_file [count + 4][:-1]
                 Grid.update_grid(colors.BLACK, old_cell, surface)
                 Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_with_box.png", new_cell, surface)
                 pygame.display.set_caption("moving " + str(robot) + " from " + str(old_cell) + " to " + str(new_cell) + " with " + str(box))
@@ -143,7 +143,7 @@ class Grid:
             if "(drop" in value :
                 robot = text_file[count + 1]
                 box = text_file[count + 2]
-                current_cell = text_file[count + 3][:-1] #ok
+                current_cell = text_file[count + 3][:-1] 
                 Grid.update_grid(colors.BLACK, current_cell, surface)
                 Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\box.png", current_cell, surface)
                 Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_free.png", current_cell, surface)
