@@ -22,7 +22,7 @@ class Grid:
         surface = pygame.display.set_mode((GRID_LENGHT, GRID_LENGHT))
         pygame.display.set_caption("Griglia")
         surface.fill(colors.BLACK)
-        for x in range(0, GRID_LENGHT, CELL_SIZE): ############################### prova a sostituire drawlines
+        for x in range(0, GRID_LENGHT, CELL_SIZE): 
             pygame.draw.line(surface, colors.WHITE, (x, 0), (x, GRID_LENGHT))
         for y in range(0, GRID_LENGHT, CELL_SIZE):
             pygame.draw.line(surface, colors.WHITE, (0, y), (GRID_LENGHT, y))
@@ -75,15 +75,15 @@ class Grid:
         for index, value in enumerate(text_file):
             if ("robot_at_cell" in value):
                 cell = text_file[count +2]
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\robot_free.png", cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_free.png", cell, surface)
  
             elif ("box_at_cell" in value):
                 cell = text_file[count +2]
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\box.png", cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\box.png", cell, surface)
  
             elif ("occupied_by_obstacle" in value):
                 cell = text_file[count +1]
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\x.png", cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\x.png", cell, surface)
  
             count = count +1
             pygame.display.update()
@@ -102,10 +102,10 @@ class Grid:
                 new_cell = text_file [count + 3][:-1]
                 current_robot_num = int (robot[-1])
                 Grid.update_grid(colors.BLACK, old_cell, surface)
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\robot_free.png", new_cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_free.png", new_cell, surface)
                 pygame.display.set_caption("moving " + str(robot) + " from " + str(old_cell) + " to " + str(new_cell))
                 if (array_drop[current_robot_num -1] == 1):
-                    Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\box.png", old_cell, surface)
+                    Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\box.png", old_cell, surface)
                     Grid.draw_lines(surface)
                     clock.tick(1.8)
                     pygame.display.update()
@@ -120,7 +120,7 @@ class Grid:
                 box = text_file[count + 2]
                 current_cell = text_file[count + 3][:-1] #ok
                 Grid.update_grid(colors.BLACK ,current_cell, surface)
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\robot_with_box.png", current_cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_with_box.png", current_cell, surface)
                 pygame.display.set_caption( str(robot) + " is grabbing " + str(box) + " at cell " + str(current_cell))
                 Grid.draw_lines(surface)
                 clock.tick(1.8)
@@ -133,7 +133,7 @@ class Grid:
                 old_cell = text_file[count + 3] #valore giusto
                 new_cell = text_file [count + 4][:-1] #valore giusto
                 Grid.update_grid(colors.BLACK, old_cell, surface)
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\robot_with_box.png", new_cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_with_box.png", new_cell, surface)
                 pygame.display.set_caption("moving " + str(robot) + " from " + str(old_cell) + " to " + str(new_cell) + " with " + str(box))
                 Grid.draw_lines(surface)
                 clock.tick(1.8)
@@ -145,8 +145,8 @@ class Grid:
                 box = text_file[count + 2]
                 current_cell = text_file[count + 3][:-1] #ok
                 Grid.update_grid(colors.BLACK, current_cell, surface)
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\box.png", current_cell, surface)
-                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\progetto_SI\GUI\images\robot_free.png", current_cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\box.png", current_cell, surface)
+                Grid.draw_image(r"C:\Users\user\OneDrive\Documenti\ProgettoSI\GUI\images\robot_free.png", current_cell, surface)
                 pygame.display.set_caption( str(robot) + " is dropping " + str(box) + " at cell " + str(current_cell))
                 current_robot_num =  int(robot[-1])
                 array_drop[current_robot_num -1] = 1
