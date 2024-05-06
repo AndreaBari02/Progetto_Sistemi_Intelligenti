@@ -1,0 +1,71 @@
+g(n)= 51.0 h(n)=5.0
+ g(n)= 52.0 h(n)=4.0
+ g(n)= 53.0 h(n)=3.0
+ g(n)= 54.0 h(n)=2.0
+ g(n)= 55.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (move_vertical_robot_free robot1 c4 c12)
+1.0: (move_vertical_robot_free robot1 c12 c20)
+2.0: (move_vertical_robot_free robot4 c61 c53)
+3.0: (move_vertical_robot_free robot4 c53 c45)
+4.0: (move_vertical_robot_free robot2 c5 c13)
+5.0: (move_vertical_robot_free robot2 c13 c21)
+6.0: (move_vertical_robot_free robot1 c20 c28)
+7.0: (grab robot1 box1 c28)
+8.0: (move_vertical_robot_with_box robot1 box1 c28 c20)
+9.0: (move_vertical_robot_free robot2 c21 c29)
+10.0: (grab robot2 box2 c29)
+11.0: (move_vertical_robot_with_box robot2 box2 c29 c21)
+12.0: (move_horizontal_robot_with_box robot1 box1 c20 c19)
+13.0: (move_horizontal_robot_with_box robot1 box1 c19 c18)
+14.0: (move_horizontal_robot_with_box robot1 box1 c18 c17)
+15.0: (move_horizontal_robot_with_box robot2 box2 c21 c22)
+16.0: (move_horizontal_robot_with_box robot2 box2 c22 c23)
+17.0: (move_horizontal_robot_with_box robot2 box2 c23 c24)
+18.0: (drop robot1 box1 c17)
+19.0: (drop robot2 box2 c24)
+20.0: (move_horizontal_robot_free robot2 c24 c23)
+21.0: (move_horizontal_robot_free robot2 c23 c22)
+22.0: (move_horizontal_robot_free robot2 c22 c21)
+23.0: (move_vertical_robot_free robot2 c21 c13)
+24.0: (move_vertical_robot_free robot2 c13 c5)
+25.0: (move_horizontal_robot_free robot1 c17 c18)
+26.0: (move_horizontal_robot_free robot1 c18 c19)
+27.0: (move_horizontal_robot_free robot1 c19 c20)
+28.0: (move_vertical_robot_free robot1 c20 c12)
+29.0: (move_vertical_robot_free robot1 c12 c4)
+30.0: (move_vertical_robot_free robot3 c60 c52)
+31.0: (move_vertical_robot_free robot3 c52 c44)
+32.0: (move_vertical_robot_free robot4 c45 c37)
+33.0: (grab robot4 box4 c37)
+34.0: (move_vertical_robot_with_box robot4 box4 c37 c45)
+35.0: (move_vertical_robot_free robot3 c44 c36)
+36.0: (grab robot3 box3 c36)
+37.0: (move_vertical_robot_with_box robot3 box3 c36 c44)
+38.0: (move_horizontal_robot_with_box robot3 box3 c44 c43)
+39.0: (move_horizontal_robot_with_box robot3 box3 c43 c42)
+40.0: (move_horizontal_robot_with_box robot3 box3 c42 c41)
+41.0: (move_horizontal_robot_with_box robot4 box4 c45 c46)
+42.0: (move_horizontal_robot_with_box robot4 box4 c46 c47)
+43.0: (move_horizontal_robot_with_box robot4 box4 c47 c48)
+44.0: (drop robot3 box3 c41)
+45.0: (drop robot4 box4 c48)
+46.0: (move_horizontal_robot_free robot4 c48 c47)
+47.0: (move_horizontal_robot_free robot4 c47 c46)
+48.0: (move_horizontal_robot_free robot4 c46 c45)
+49.0: (move_vertical_robot_free robot4 c45 c53)
+50.0: (move_vertical_robot_free robot4 c53 c61)
+51.0: (move_horizontal_robot_free robot3 c41 c42)
+52.0: (move_horizontal_robot_free robot3 c42 c43)
+53.0: (move_horizontal_robot_free robot3 c43 c44)
+54.0: (move_vertical_robot_free robot3 c44 c52)
+55.0: (move_vertical_robot_free robot3 c52 c60)
+
+Plan-Length:56
+Metric (Search):56.0
+Planning Time (msec): 4331
+Heuristic Time (msec): 4156
+Search Time (msec): 4331
+Expanded Nodes:60
